@@ -1,18 +1,19 @@
 import pygame
 import random
 
+width = 1000
+height = 1000
+
 verticesCount = 3
 vertices = []
 for i in range(0, verticesCount):
-    vertices.append([random.randint(0,500), random.randint(0,500)])
+    vertices.append([random.randint(0, width), random.randint(0, height)])
 
-point = [random.randint(0,500), random.randint(0,500)]
-
-print(vertices)
+point = [random.randint(0, width), random.randint(0, height)]
 
 pygame.init()
 
-screen = pygame.display.set_mode([500, 500])
+screen = pygame.display.set_mode([width, height])
 
 running = True
 
@@ -34,5 +35,4 @@ while running:
     point = newPoint
 
     pygame.display.flip()
-
 pygame.quit()
