@@ -28,7 +28,10 @@ while running:
 
             running = False
 
-    
+    screen.set_at((point[0], point[1]), (255,255,255))
+    randCorner = random.randint(0, verticesCount - 1)
+    newPoint = [int(round((vertices[randCorner][0] + point[0]) / 2)), int(round((vertices[randCorner][1] + point[1]) / 2))]
+    point = newPoint
 
     pygame.display.flip()
 
